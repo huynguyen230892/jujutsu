@@ -7,7 +7,7 @@
 
 :root {
     --primary-color: #F9CB55;
-    --primary-dark: #0051D5;
+    --primary-dark: #F9CB55;
     --text-primary: #1D1D1F;
     --text-secondary: #86868B;
     --bg-primary: #FFFFFF;
@@ -630,7 +630,7 @@ body {
 .cta {
     padding: 100px 0;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    color: white;
+    color: black;
     text-align: center;
 }
 
