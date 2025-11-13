@@ -191,6 +191,10 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
+.hero .btn-primary {
+    color: black;
+}
+
 .btn-secondary {
     background: transparent;
     color: var(--text-primary);
