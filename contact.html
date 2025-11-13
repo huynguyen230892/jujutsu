@@ -1,49 +1,163 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <base href="./">
-    <title>Contact</title>
-    <meta property="og:title" content="about - Untitled" />
-    <meta name="twitter:title" content="about - Untitled" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <!-- Compressed Styles -->
-    <link href="css/slides.min.css?521351" rel="stylesheet" type="text/css">
-
-    
-    <!-- Fonts and Material Icons -->
-    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Material+Icons&display=swap"/>
-    <style>
-        .slides { font-family: 'Inter', sans-serif; }
-    </style>
-     
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jujutsu Reader Support</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafb;
+      color: #333;
+    }
+    header {
+      background: #F9CB55;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h1, h2 {
+      margin-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    a.button, button.submit-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #F9CB55;
+      color: black;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    a.button:hover, button.submit-btn:hover {
+      background: #1e40af;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .hidden {
+      display: none;
+    }
+    .sending {
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #2563eb;
+    }
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #2563eb;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #f3f4f6;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-<body class="slides animated noPreload">
-<!-- White Slide 1 (#10) -->
-<section class="slide whiteSlide">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-      
-        <div class="fix-7-12">
-          <h1 class="smaller margin-bottom-2 ae-1">Let's talk</h1>
-          <p class="large ae-2"><span class="opacity-8">Share your excitement with us.</span></p>
-          <a href = "mailto: thamtran1709@gmail.com"><strong style="color:#E59844;"><u>Send Mail</u></strong></a>
-        </div>    
-        
+<body>
+  <header>
+    <h1 style="color: rgb(0, 0, 0);">Jujutsu Reader Support</h1>
+  </header>
+  <main>
+
+    <div class="card">
+      <h2>Submit an Issue</h2>
+      <p>
+        Please fill in the form below to report a problem.
+      </p>
+      <form id="issueForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="device">Device</label>
+        <select id="device" name="device">
+          <option>iPhone</option>
+          <option>iPad</option>
+          <option>Mac</option>
+          <option>Apple TV</option>
+        </select>
+
+        <label for="issue">Issue Description</label>
+        <textarea id="issue" name="issue" rows="5" placeholder="Describe your issue here..." required></textarea>
+
+        <button type="submit" class="submit-btn">Submit Issue</button>
+      </form>
+      <div id="sending" class="hidden">
+        <div class="spinner"></div>
+        <p class="sending">Sending your issue...</p>
+      </div>
+      <div id="success" class="hidden">
+        <p class="sending" style="color: green;">✅ Your issue has been sent successfully.</p>
       </div>
     </div>
-  </div>
-  
-</section>
 
-<!-- jQuery 3.5.1 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>
+        You can also reach out to our support team directly via email.
+      </p>
+      <p>Email: <a href="mailto:tinyman2308@gmail.com">tinyman2308@gmail.com</a></p>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Huy Nguyen. All rights reserved.
+  </footer>
 
-    <!-- Compressed Scripts -->
-    <script src="js/slides.min.js?521351" type="text/javascript"></script>
-     
+  <script>
+    const form = document.getElementById('issueForm');
+    const sendingDiv = document.getElementById('sending');
+    const successDiv = document.getElementById('success');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.classList.add('hidden');
+      sendingDiv.classList.remove('hidden');
+
+      setTimeout(() => {
+        sendingDiv.classList.add('hidden');
+        successDiv.classList.remove('hidden');
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
